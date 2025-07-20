@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
 </head>
-
+<div id="magic-pointer"></div>
 <body>
   
 
@@ -54,5 +54,26 @@ mobile products.
     </ul>
   </div>
 </body>
+<script>
+  const pointer = document.getElementById('magic-pointer');
+  document.addEventListener('mousemove', (e) => {
+    pointer.style.left = e.clientX + 'px';
+    pointer.style.top = e.clientY + 'px';
+  });
 
+  document.querySelectorAll('a, button, input, textarea').forEach(el => {
+    el.addEventListener('mouseenter', () => {
+      pointer.style.width = '48px';
+      pointer.style.height = '48px';
+      pointer.style.background = 'rgba(255,255,255,0.18)';
+      pointer.style.border = '2px solid #00ffea';
+    });
+    el.addEventListener('mouseleave', () => {
+      pointer.style.width = '32px';
+      pointer.style.height = '32px';
+      pointer.style.background = 'rgba(255,255,255,0.08)';
+      pointer.style.border = '2px solid #fff';
+    });
+  });
+</script>
 </html>
