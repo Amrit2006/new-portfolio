@@ -9,6 +9,7 @@ body,html{
 
 .topAppBar{ 
 display: flex;
+    cursor:none;
 
   
 }
