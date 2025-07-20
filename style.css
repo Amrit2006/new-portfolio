@@ -157,7 +157,7 @@ padding-top: 10px;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 500px) {
   .main img {
     height: 300px;
     width: 200px;
@@ -170,17 +170,26 @@ padding-top: 10px;
     font-size: 16px;
     padding-top: 5px;
   }
+ .bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    background: #000;
+    z-index: 100;
+  }
   .bottom ul {
     flex-direction: row;
-    align-items: flex-start;
-    padding-left: 75px;
-    padding-top: 280px;
-
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0 10px 0;
+    margin: 0;
+    width: 100%;
   }
   .bottom #links a {
     padding-left: 12px;
     font-size: 14px;
-    padding-bottom: 10px;
+    padding-bottom: 0;
     display: inline-block;
   }
   .topAppBar {
